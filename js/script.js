@@ -1,7 +1,29 @@
 $(function(){
-  $("#show-first").click(function(){
-    $("#q1").slideDown();
-  });
+
+  $("#start").click(function(){
+    $("#q1").addClass("is-active");
+  })
+
+  $("#next").click(function(){
+
+    var present = $(".is-active").prop("id")
+    next = present[0]+(parseInt(present[1])+1)
+
+    $("#"+present).removeClass("is-active")
+    $("#"+next).addClass("is-active")
+  })
+
+  $("#prev").click(function(){
+    var present = $(".is-active").prop("id")
+    prev = present[0]+(parseInt(present[1])-1)
+
+    $("#"+present).removeClass("is-active")
+    $("#"+prev).addClass("is-active")
+
+  })
+
+
+
 
   $("#submit").click(function(){
     var tally=0;
@@ -19,7 +41,6 @@ $(function(){
       }
 
       console.log(tally)
-      debugger
 
     })
 

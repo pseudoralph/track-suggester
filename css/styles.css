@@ -1,4 +1,14 @@
 .question {
+  width: 500px;
+  margin: auto;
+  display: none;
+}
+
+.is-active {
+  display: block;
+}
+
+.hide {
   display: none;
 }
 
