@@ -13,52 +13,107 @@
     <body>
       <div class="container">
 
-        <div class="row">
 
 
-          <div class="question">
-
+          <div class="question" id="q1">
             <h3>What do you like to read?</h3>
-            <!-- form-check -->
-            <div class="answers">
+
+            <div class="response">
               <div class="form-check">
-                <input class="form-check-input" type="radio" id="exampleRadios1" value="option1">magazines</label>
+                <input class="form-check-input" type="radio" name="q1" id="q1r1" value="1">
+                <label class="form-check-label" for="q1r1">Magazines</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" id="exampleRadios2" value="option2">blogs</label>
+                <input class="form-check-input" type="radio" name="q1" id="q1r2" value="2">
+                <label class="form-check-label" for="q1r2">Blogs</label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" id="exampleRadios3" value="option3" >non-fiction</label>
+                <input class="form-check-input" type="radio" name="q1" id="q1r3" value="3">
+                <label class="form-check-label" for="q1r3">Non-fiction</label>
               </div>
             </div>
 
           </div>
 
-          <!-- a) magazines
-          b) blogs
-          c) non-fiction -->
+          <div class="question" id="q2">
 
-          <h3>What was your favorite subject in school?</h3>
-          a) art/music
-          b) lunch
-          c) math/science
-
-          <h3>You reach into you coat pocket and find a $20. What do you do with it?</h3>
-          a) a ticket to the art museum
-          b) buy a new phone case
-          c) put it in a high-yield money market account
-
-
-          <h3>Inspirition strikes! How do you choose to remember it?</h3>
-          a) sketch it in my moleskine
-          b) instagram
-          c) memories are ephemeral and a skewed represenetation of my relaity. I have more impportant things to do than recording the day-to-day minutia of life
+            <h3>What was your favorite subject in school?</h3>
+            <div class="response">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2r1" value="1">
+                <label class="form-check-label" for="q2r1">Art</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2r2" value="2">
+                <label class="form-check-label" for="q2r2">Lunch</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q2" id="q2r3" value="3">
+                <label class="form-check-label" for="q2r3">Math</label>
+              </div>
+            </div>
 
 
-          <h3>What's your favorite color?</h3>
-          a) Greenery Pantone 15-0343
-          b) anything with a Clarendon filter
-          c) white. because it contains all the colors of the spectrum
+          </div>
+
+          <div class="question" id="q3">
+            <h3>You reach into you coat pocket and find a $20. What do you do with it?</h3>
+            <div class="response">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3r1" value="1">
+                <label class="form-check-label" for="q3r1">A ticket to the art museum</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3r2" value="2">
+                <label class="form-check-label" for="q3r2">Buy a new phone case</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q3" id="q3r3" value="3">
+                <label class="form-check-label" for="q3r3">Put it in a high-yield money market account</label>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="question" id="q4">
+            <h3>Inspirition strikes! How do you choose to remember it?</h3>
+            <div class="response">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4r1" value="1">
+                <label class="form-check-label" for="q4r1">Sketch it in my Moleskine</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4r2" value="2">
+                <label class="form-check-label" for="q4r2">Instagram</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q4" id="q4r3" value="3">
+                <label class="form-check-label" for="q4r3">Memories are ephemeral and a skewed represenetation of my relaity. I have more impportant things to do than recording the day-to-day minutia of life</label>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="question" id="q5">
+            <h3>What's your favorite color?</h3>
+            <div class="response">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5r1" value="1">
+                <label class="form-check-label" for="q5r1">Greenery Pantone 15-0343</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5r2" value="2">
+                <label class="form-check-label" for="q5r2">Anything with a Clarendon filter</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="q5" id="q5r3" value="3">
+                <label class="form-check-label" for="q5r3">White because it contains all the colors of the spectrum</label>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+
 
 
 
