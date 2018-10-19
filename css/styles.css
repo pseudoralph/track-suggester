@@ -20,7 +20,20 @@
   display: block;
 }
 
+p.make-selection {
+  display: none;
+  font-size: small;
+  text-align: center;
+  line-height: 3em;
+  color: red;
+  text-decoration: underline;
+}
+
 #show-first {
   display: block;
   margin: auto;
+}
+
+#submit {
+  display: none;
 }
