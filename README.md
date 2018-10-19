@@ -1,4 +1,4 @@
-# Coding track suggestor
+# Coding track suggester
 
 #### Website showcasing use of logic in JS and jQuery, October 19, 2018
 
@@ -9,11 +9,11 @@ This webpage simplifies a student's choice when enrolling in a coding track at E
 
 ## Setup/Installation Requirements
 
-* clone this repository using `git clone https://github.com/pseudoralph/track-suggestor`
+* clone this repository using `git clone https://github.com/pseudoralph/track-suggester`
 * navigate to the downloaded repo
 * launch `index.html` in a browser of your choice
 
-Alternatively, this site can be viewed at [https://pseudoralph.github.io/track-suggestor/](https://pseudoralph.github.io/track-suggestor/)
+Alternatively, this site can be viewed at [https://pseudoralph.github.io/track-suggester/](https://pseudoralph.github.io/track-suggester/)
 
 ## Technologies Used
 
