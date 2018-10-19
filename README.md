@@ -20,23 +20,23 @@ Alternatively, this site can be viewed at [https://pseudoralph.github.io/track-s
 HTML, CSS, JS, and jQuery
 
 ## Objectives
-- [ ] All previous standards (last week's objectives) are in place (see below).
+- [x] All previous standards (last week's objectives) are in place (see below).
 
-- [ ] Site uses branching to return the result.
+- [x] Site uses branching to return the result.
 
-- [ ] jQuery is used to show and hide the result after questions are answered and submitted. (Tip: test your app several times with different answers.)
+- [x] jQuery is used to show and hide the result after questions are answered and submitted. (Tip: test your app several times with different answers.)
 
-- [ ] Form gathers input from the user.
+- [x] Form gathers input from the user.
 
-- [ ] Variable names are descriptive of what they represent.
+- [x] Variable names are descriptive of what they represent.
 
-- [ ] Web page is styled using Bootstrap and custom CSS.
+- [x] Web page is styled using Bootstrap and custom CSS.
 
-- [ ] The project is in a presentable, portfolio-quality state.
+- [x] The project is in a presentable, portfolio-quality state.
 
-- [ ] Required functionality is in place by the Friday deadline.
+- [x] Required functionality is in place by the Friday deadline.
 
-- [ ] Project demonstrates understanding of concepts covered this week. If prompted, you are able to discuss your code with an instructor using correct terminology.
+- [x] Project demonstrates understanding of concepts covered this week. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 ---
 

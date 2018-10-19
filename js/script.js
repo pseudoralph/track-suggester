@@ -4,22 +4,21 @@ function whichTrack(score) {
   if (track < 1.5) {
     return {
       title: 'CSS/Design',
-      summary: 'Based on these results...',
+      summary: "You've got an eye for design and creativity! Persuing a track in CSS and design might be the right track for you. Often, this is the track persued by those who want to program on the web—specifically frontend UI.",
       image: 'imgs/css.jpg'}
     }
   else if (track < 2.4) {
     return {
       title: 'Java/Android',
-      summary: 'Based on these results...',
-      image: 'imgs/java.jpg'}
+      summary: "You're the type of the person who's in the know—and always on their phone. Persuing a track in Java, which powers the apps on the Android operating system, would be a great path for you to follow.",
+      image: 'imgs/android.jpg'}
     }
   return {
     title: 'C#/.Net',
-    summary: 'Based on these results...',
+    summary: "You're a no-nonsense type of person. A track in C# and .Net would be best for you. But don't think you won't be having any fun. The .Net framework runs deep in the enterprise world—after all, it was built up by Microsoft.",
     image: 'imgs/c-sharp.jpg'
   }
 }
-
 
 $(function(){
   $("#start").click(function(){
@@ -48,43 +47,34 @@ $(function(){
     } else {
       $("span.make-selection").show();
     }
-
   })
 
   $("#prev").click(function(){
     var present = $(".is-active").prop("id");
     var prev = present[0]+(parseInt(present[1])-1);
-
+    $("span.make-selection").hide();
     if (parseInt(present[1]-1)>0) {
       $("#"+present).removeClass("is-active");
       $("#"+prev).addClass("is-active");
     }
   })
 
-
   $("#submit").click(function(){
     var tally=0;
-    $(".question").each(function(i) {
-      // checks all sections are completed on submit
-      var block = $(this).attr("id");
 
+    $(".question").each(function(i) {
+      var block = $(this).attr("id");
       if ($("#"+block+" input:radio:checked").length) {
-        console.log("question "+parseInt(i+1)+" reponse = "+ $("#"+block+" input:radio:checked").val());
         tally = tally + parseInt($("#"+block+" input:radio:checked").val())
-      } else {
-        console.log("student left question " +parseInt(i+1)+ " blank")
-        return false
       }
 
     })
+    $("#submit").hide();
 
-    // console.log(whichTrack(tally));
     $(".results #image").attr("src",whichTrack(tally).image);
     $(".results #title").text(whichTrack(tally).title);
     $(".results #summary").text(whichTrack(tally).summary);
     $(".results").show();
-
-
   })
 
   $("#restart").click(function(){
@@ -95,9 +85,4 @@ $(function(){
     $("#submit").hide();
     $("#start").show();
   })
-
-
 });
-
-
-// reset all selections $("input:radio:checked").prop("checked", false)

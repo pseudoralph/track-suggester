@@ -1,14 +1,8 @@
 body{
   padding-top: 30px;
-  }
-
-.quiz, .results {
-  display: none;
 }
 
-.question {
-  /* width: 500px; */
-  margin: auto;
+.quiz, .results, .question, #submit {
   display: none;
 }
 
@@ -17,14 +11,6 @@ body{
 }
 
 .is-active {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
-.response {
   display: block;
 }
 
@@ -54,14 +40,10 @@ span.make-selection {
 #next, #prev {
   font-size: 48px;
   color: lightgrey;
-  line-height: 3em;
+  line-height: 4em;
 }
 
 #show-first {
   display: block;
   margin: auto;
-}
-
-#submit {
-  display: none;
 }
