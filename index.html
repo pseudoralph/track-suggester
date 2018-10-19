@@ -4,8 +4,12 @@
       <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
       <link rel="stylesheet" href="css/styles.css">
+
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
 
       <meta charset="utf-8">
       <title>Track Selector</title>
@@ -13,25 +17,29 @@
     <body>
       <div class="container">
 
-        <div>
-          <p>Choosing the right programming language to learn is a difficult decision to make.</p>
-          <p>That's why it's best to consider your personality in choosing a track. This will give you a head start towards the path to success.</p>
-          <p>To make this decision process easier, answer the following questions and find out which programming track is best suited for your personality.</p>
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <p>Choosing the right programming language to learn is a difficult decision to make.</p>
+            <p>That's why it's best to consider your personality in choosing a track. This will give you a head start towards the path to success.</p>
+            <p>To make this decision process easier, answer the following questions and find out which programming track is best suited for your personality.</p>
 
-          <button type="button" class="btn btn-primary" id="start">Let's begin</button>
+            <button type="button" class="btn btn-primary" id="start">Let's begin!</button>
 
+          </div>
+      </div>
 
-        </div>
 
         <div class="quiz">
 
           <div class="row">
 
-            <div class="col-md-1" id="prev">
-              <p>prev</p>
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-1" id="prev">
+              <i class="fas fa-chevron-circle-left"></i>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-sm-6 mx-auto">
 
               <div class="question" id="q1">
                 <h3>What do you like to read?</h3>
@@ -48,7 +56,10 @@
                     <input class="form-check-input" type="radio" name="q1" id="q1r3" value="3">
                     <label class="form-check-label" for="q1r3">Non-fiction</label>
                   </div>
-                  <p class="make-selection">Make a selection to continue</p>
+                  <div class="progress bar">
+                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="make-selection">Make a selection to continue</span></div>
+
+                  </div>
 
                 </div>
               </div>
@@ -68,7 +79,9 @@
                     <input class="form-check-input" type="radio" name="q2" id="q2r3" value="3">
                     <label class="form-check-label" for="q2r3">Math</label>
                   </div>
-                  <p class="make-selection">Make a selection to continue</p>
+                  <div class="progress bar">
+                    <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="make-selection">Make a selection to continue</span></div>
+                  </div>
 
                 </div>
               </div>
@@ -88,7 +101,9 @@
                     <input class="form-check-input" type="radio" name="q3" id="q3r3" value="3">
                     <label class="form-check-label" for="q3r3">Put it in a high-yield money market account</label>
                   </div>
-                  <p class="make-selection">Make a selection to continue</p>
+                  <div class="progress bar">
+                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="make-selection">Make a selection to continue</span></div>
+                  </div>
 
                 </div>
               </div>
@@ -108,7 +123,9 @@
                     <input class="form-check-input" type="radio" name="q4" id="q4r3" value="3">
                     <label class="form-check-label" for="q4r3">Memories are ephemeral and a skewed represenetation of my relaity. I have more impportant things to do than recording the day-to-day minutia of life</label>
                   </div>
-                  <p class="make-selection">Make a selection to continue</p>
+                  <div class="progress bar">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="make-selection">Make a selection to continue</span></div>
+                  </div>
 
                 </div>
               </div>
@@ -128,7 +145,9 @@
                     <input class="form-check-input" type="radio" name="q5" id="q5r3" value="3">
                     <label class="form-check-label" for="q5r3">White because it contains all the colors of the spectrum</label>
                   </div>
-                  <p class="make-selection">Make a selection to continue</p>
+                  <div class="progress bar">
+                    <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="make-selection">Make a selection to continue</span></div>
+                  </div>
 
 
                   <button type="button" class="btn btn-primary" id="submit">Submit</button>
@@ -141,9 +160,12 @@
 
 
             </div>
-            <div class="col-md-1" id="next">
-              <p>next</p>
+            <div class="col-sm-1" id="next">
+              <i class="fas fa-chevron-circle-right"></i>
             </div>
+            <div class="col-sm-2"></div>
+
+
           </div>
 
         </div>

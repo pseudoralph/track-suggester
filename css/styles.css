@@ -1,11 +1,19 @@
+body{
+  padding-top: 30px;
+  }
+
 .quiz, .results {
   display: none;
 }
 
 .question {
-  width: 500px;
+  /* width: 500px; */
   margin: auto;
   display: none;
+}
+
+.question h3 {
+  margin-bottom: 20px;
 }
 
 .is-active {
@@ -20,19 +28,33 @@
   display: block;
 }
 
+.response .bar {
+  margin: 25px 0;
+}
+
 .results {
   width: 40%;
+  margin: 20px auto 30px;
+}
+
+span.make-selection {
+  display: none;
+  font-weight: 800;
+  text-align: left;
+  padding-left: 10px;
+  color: white;
+}
+
+#start {
+  display: block;
+  width: 150px;
   margin: auto;
 }
 
-
-p.make-selection {
-  display: none;
-  font-size: small;
-  text-align: center;
+#next, #prev {
+  font-size: 48px;
+  color: lightgrey;
   line-height: 3em;
-  color: red;
-  text-decoration: underline;
 }
 
 #show-first {

@@ -26,6 +26,7 @@ $(function(){
     $("#q1").addClass("is-active");
     $(".quiz").slideDown();
     $("#q5 input:radio").change(function(){
+      $("#q5 .progress-bar").attr("style","width: 100%");
       $(".is-active #submit").show();
     })
     $("#start").hide();
@@ -36,7 +37,7 @@ $(function(){
     var next = present[0]+(parseInt(present[1])+1);
 
     $(".is-active input:radio").change(function(){
-      $("p.make-selection").hide();
+      $("span.make-selection").hide();
     })
 
     if ($(".is-active input:radio:checked").length) {
@@ -45,7 +46,7 @@ $(function(){
         $("#"+next).addClass("is-active");
       }
     } else {
-      $("p.make-selection").show();
+      $("span.make-selection").show();
     }
 
   })
