@@ -1,14 +1,29 @@
 function whichTrack(score) {
   var track = score/5;
 
-  if (track < 1.5) {return 'CSS/Design'}
-  else if (track < 2.4) {return 'Java/Android'}
-  return 'C#/.Net'
+  if (track < 1.5) {
+    return {
+      title: 'CSS/Design',
+      summary: 'Based on these results...',
+      image: 'imgs/css.jpg'}
+    }
+  else if (track < 2.4) {
+    return {
+      title: 'Java/Android',
+      summary: 'Based on these results...',
+      image: 'imgs/java.jpg'}
+    }
+  return {
+    title: 'C#/.Net',
+    summary: 'Based on these results...',
+    image: 'imgs/c-sharp.jpg'
+  }
 }
 
 
 $(function(){
   $("#start").click(function(){
+    $("#q1").addClass("is-active");
     $(".quiz").slideDown();
     $("#q5 input:radio").change(function(){
       $(".is-active #submit").show();
@@ -62,8 +77,22 @@ $(function(){
 
     })
 
-    console.log(whichTrack(tally));
+    // console.log(whichTrack(tally));
+    $(".results #image").attr("src",whichTrack(tally).image);
+    $(".results #title").text(whichTrack(tally).title);
+    $(".results #summary").text(whichTrack(tally).summary);
+    $(".results").show();
 
+
+  })
+
+  $("#restart").click(function(){
+    $("input:radio:checked").prop("checked", false);
+    $(".is-active").removeClass("is-active");
+    $(".quiz").hide();
+    $(".results").hide();
+    $("#submit").hide();
+    $("#start").show();
   })
 
 

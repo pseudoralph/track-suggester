@@ -1,4 +1,4 @@
-.quiz {
+.quiz, .results {
   display: none;
 }
 
@@ -19,6 +19,12 @@
 .response {
   display: block;
 }
+
+.results {
+  width: 40%;
+  margin: auto;
+}
+
 
 p.make-selection {
   display: none;
