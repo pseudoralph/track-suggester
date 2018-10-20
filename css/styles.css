@@ -10,6 +10,10 @@ body{
   margin-bottom: 20px;
 }
 
+.quiz .row {
+  margin-right: 0 !important;
+}
+
 .is-active {
   display: block;
 }
@@ -19,9 +23,14 @@ body{
 }
 
 .results {
-  min-width: 420px;
-  width: 420px;
+  max-width: 400px;
+  width: 100vw;
   margin: 20px auto 30px;
+}
+
+.results .card {
+  /* margin: 10px; */
+  width: 92vw;
 }
 
 span.make-selection {
@@ -45,7 +54,7 @@ span.make-selection {
 }
 
 #prev {
-  padding: 0 20px;
+  padding: 0 20px 0 10px;
   text-align: right;
 }
 
