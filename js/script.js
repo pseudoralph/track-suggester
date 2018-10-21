@@ -126,6 +126,8 @@ $(function(){
 
     $(".is-active").removeClass("is-active");
     $(".quiz, .results, #submit").hide();
+
+    $("#prev, #next").removeClass("proceed");
     $("#prev, #next, #start").show();
   })
 });
