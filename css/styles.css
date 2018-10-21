@@ -29,7 +29,6 @@ body{
 }
 
 .results .card {
-  /* margin: 10px; */
   width: 92vw;
   max-width: 400px;
 }
@@ -44,6 +43,10 @@ span.make-selection {
 
 .proceed {
   color: rgb(211,211,211) !important;
+}
+
+.proceed i {
+  cursor: pointer;
 }
 
 #start {

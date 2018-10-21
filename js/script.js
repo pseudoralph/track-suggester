@@ -1,22 +1,28 @@
 function canProceed(event) {
-  var currentInt = parseInt($(".quiz").find(".is-active").prop("id")[1]);
+  var currentQuestionNum = parseInt($(".quiz").find(".is-active").prop("id")[1]);
+  var canGoBack = ($(".is-active").parent().find("input:radio:checked").length);
+  var makeSelectionMsg = $(".is-active #submit").css("display");
+
+  var next = $(".is-active").parent().siblings("#next");
+  var prev = $(".is-active").parent().siblings("#prev");
+
   $("#prev, #next").removeClass("proceed");
 
-  if (event.type === 'change' && currentInt <=5) {
-    if (currentInt > 1) {
-      $(".is-active").parent().siblings("#prev").addClass("proceed");
+  if (event.type === 'change' && currentQuestionNum <=5) {
+    if (currentQuestionNum > 1) {
+      prev.addClass("proceed");
     }
-    $(".is-active").parent().siblings("#next").addClass("proceed");
+    next.addClass("proceed");
     return;
   }
 
   if (event.type === 'click') {
-    var canGoBack = ($(".is-active").parent().find("input:radio:checked").length);
-    if (currentInt > 1) {
-      $(".is-active").parent().siblings("#prev").addClass("proceed");
+
+    if (currentQuestionNum > 1) {
+      prev.addClass("proceed");
     }
-    if (canGoBack >= currentInt && $(".is-active #submit").css("display") !== 'inline-block') {
-      $(".is-active").parent().siblings("#next").addClass("proceed");
+    if (canGoBack >= currentQuestionNum && makeSelectionMsg !== 'inline-block') {
+      next.addClass("proceed");
     }
   }
 }
