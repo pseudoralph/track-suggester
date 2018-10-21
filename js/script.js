@@ -1,3 +1,44 @@
+function canProceed(event) {
+  var currentInt = parseInt($(".quiz").find(".is-active").prop("id")[1]);
+
+  console.log("current id# q"+currentInt)
+
+
+  $("#prev, #next").removeClass("proceed")
+
+
+  if (event.type === 'change' && currentInt <5) {
+    if (currentInt > 1) {
+      $(".is-active").parent().siblings("#prev").addClass("proceed");
+
+
+    }
+    $(".is-active").parent().siblings("#next").addClass("proceed");
+    return;
+  }
+
+  if (event.type === 'click') {
+    // $(".is-active").parent().siblings("#proceed, #next").removeClass("proceed");
+    if (currentInt > 1) {
+      $(".is-active").parent().siblings("#prev").addClass("proceed");
+
+    }
+
+  }
+
+
+  if ($(".is-active span.make-selection").css("display") === "block") {
+    console.log("can't proceed")
+
+  } else {
+
+  }
+
+
+  // console.log($("input:radio"))
+
+}
+
 function whichTrack(score) {
   var track = score/5;
 
@@ -21,17 +62,26 @@ function whichTrack(score) {
 }
 
 $(function(){
+  $("input:radio").change(function(e){
+    canProceed(e);
+  })
+
   $("#start").click(function(){
     $("#q1").addClass("is-active");
     $(".quiz").slideDown();
+
+    // event listener created for 5th question to show submit button
     $("#q5 input:radio").change(function(){
+      $("#prev,#next").hide();
       $("#q5 .progress-bar").attr("style","width: 100%");
+      $("input:radio").prop("disabled", true)
       $(".is-active #submit").show();
     })
-    $("#start").hide();
-  })
 
-  $("#next").click(function(){
+    $("#start").hide();
+  });
+
+  $("#next").click(function(e){
     var present = $(".is-active").prop("id");
     var next = present[0]+(parseInt(present[1])+1);
 
@@ -47,16 +97,25 @@ $(function(){
     } else {
       $("span.make-selection").show();
     }
+    canProceed(e);
+
   })
 
-  $("#prev").click(function(){
+  $("#prev").click(function(e){
+
+
     var present = $(".is-active").prop("id");
     var prev = present[0]+(parseInt(present[1])-1);
+
     $("span.make-selection").hide();
+
     if (parseInt(present[1]-1)>0) {
       $("#"+present).removeClass("is-active");
       $("#"+prev).addClass("is-active");
     }
+    canProceed(e);
+
+
   })
 
   $("#submit").click(function(){
@@ -71,6 +130,7 @@ $(function(){
     })
     $("#submit").hide();
 
+    // render results card below
     $(".results #image").attr("src",whichTrack(tally).image);
     $(".results #title").text(whichTrack(tally).title);
     $(".results #summary").text(whichTrack(tally).summary);
@@ -80,9 +140,12 @@ $(function(){
   $("#restart").click(function(){
     $("input:radio:checked").prop("checked", false);
     $(".is-active").removeClass("is-active");
-    $(".quiz").hide();
-    $(".results").hide();
-    $("#submit").hide();
-    $("#start").show();
+
+    $("input:radio").prop("disabled", false)
+
+
+    $(".quiz, .results, #submit").hide();
+    $("#prev, #next, #start").show();
+
   })
 });
